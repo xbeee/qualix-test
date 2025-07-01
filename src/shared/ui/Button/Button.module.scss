@@ -1,0 +1,70 @@
+.container {
+  margin-bottom: var(--space-md);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Варианты кнопок
+  &Primary {
+    background-color: var(--primary-color);
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: var(--primary-hover);
+    }
+  }
+
+  &Secondary {
+    background-color: var(--secondary-color);
+    color: white;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+  }
+
+  &Outline {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+
+    &:hover:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+
+  &Danger {
+    background-color: var(--error-color);
+    color: white;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+  }
+
+  // Размеры
+  &Small {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 12px;
+  }
+
+  &Large {
+    padding: var(--space-md) var(--space-lg);
+    font-size: 16px;
+  }
+}

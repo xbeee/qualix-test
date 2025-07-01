@@ -1,0 +1,79 @@
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+  }
+}
+
+.link {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.category {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+
+  &[data-category="technical"] {
+    background-color: var(--blue-100);
+    color: var(--blue-700);
+  }
+
+  &[data-category="financial"] {
+    background-color: var(--green-100);
+    color: var(--green-700);
+  }
+
+  &[data-category="hr"] {
+    background-color: var(--purple-100);
+    color: var(--purple-700);
+  }
+
+  &[data-category="other"] {
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+  }
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.date {
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  border-top: 1px solid var(--border-color);
+}

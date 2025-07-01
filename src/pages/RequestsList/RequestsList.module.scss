@@ -1,0 +1,15 @@
+.createButton{
+  font-size: 18px;
+}
+
+.list{
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emptyMessage{
+  color: var(--text-secondary);
+  font-size: 20px;
+}
